@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    width: 40px;  /* Adjust as needed */
+    height: 40px; /* Ensure this is equal to width for a perfect circle */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navbar-name {
+    padding-left: 50px;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    position: relative;
+}
+
+.navbar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu li a:hover {
+    background-color: #575757;
+}
+
+.profile-photo {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
+}
+
+.dropdown li a {
+    padding: 10px 20px;
+}
+
+.dropdown li a:hover {
+    background-color: #575757;
+}
+
+.navbar-menu li:hover .dropdown {
+    display:grid;
+}
+
+.footer{
+    text-align: center;
+    bottom: 0%;
+}
