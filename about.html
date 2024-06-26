@@ -31,30 +31,121 @@
     margin: 0 auto;
     padding: 0;
     line-height: 1.6;
+    justify-content: center;
 }   
-fieldset {
-            border: 2px solid #ccc;
-            padding: 20px;
-            margin: 20px 0;
+        fieldset {
             display: flex;
+            width: 90%;
+            margin: 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        legend {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .left-side {
+            width: 40%;
+            background-color: #f4f4f4;
+            color: #333;
+            box-sizing: border-box;
+            padding: 20px;
+            margin-right: 10px; /* Add margin to the right of the left block */
+        }
+        .right-side {
+            width: 60%;
+            padding: 20px;
+            background-color: #e8e8e8;
+            color: #333;
+            box-sizing: border-box;
+            margin-left: 10px; /* Add margin to the left of the right block */
+        }
+        .image-name-container {
+            background: linear-gradient(to bottom right, #b0b0b0, #d0d0d0);
+            padding: 20px;
+            text-align: center;
+        }
+        .image-name-container img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        .image-name-container .name {
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .content1 {
+            padding: 20px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #b0b0b0;
+            padding-bottom: 5px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .social-media {
+            display: flex;
+            justify-content: flex-start;
             align-items: center;
         }
-        .about-section {
+        .social-media a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #0066cc;
+            display: inline-block;
+        }
+        .social-media img {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+            border-radius: 50%;
+        }
+        .social-media a:hover {
+            text-decoration: underline;
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+        .carousel img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: none;
+        }
+        .carousel img.active {
+            display: block;
+        }
+        .carousel .text {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            width: 100%;
+            transform: translateY(-50%);
         }
-        .about-section img {
-            max-width: 300px;
-            margin-right: 20px;
-        }
-        .about-text {
-            max-width: 60%;
-            text-align: left;
-        }
-        .about-section.reverse {
-            flex-direction: row-reverse;
+        .carousel-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
         }
     </style>
     <!--Import Google Icon Font-->
@@ -128,38 +219,104 @@ fieldset {
             </li>
         </ul>
     </nav>
-    <div class="fieldset">
-      <h1>About Us</h1>
-
     <fieldset>
-        <div class="about-section">
-            <img src="./static/img/chats.png" alt="Our Team">
-            <div class="about-text">
-                <h2>Who We Are</h2>
-                <p>At Aaruhi, we are a passionate team of AI enthusiasts, developers, and innovators dedicated to creating intelligent, user-friendly conversational agents. Our journey began with a simple idea: to make human-computer interaction more natural and intuitive.</p>
-            </div>
-        </div>
-    </fieldset>
+      <legend>About Us</legend>
+      <div class="left-side">
+          <div class="image-name-container">
+              <img src="your-image-url.jpg" alt="Profile Picture">
+              <div class="name">John Doe</div>
+          </div>
+          <div class="content1">
+              <div class="section">
+                  <div class="section-title">Personal Details</div>
+                  <p>Email: johndoe@example.com</p>
+                  <p>Phone: 123-456-7890</p>
+              </div>
+              <div class="section">
+                  <div class="section-title">Education</div>
+                  <p>University of Example</p>
+                  <p>Bachelor of Science in Computer Science</p>
+              </div>
+              <div class="section">
+                  <div class="section-title">Skills</div>
+                  <p>JavaScript, HTML, CSS, Python</p>
+              </div>
+          </div>
+      </div>
+      <div class="right-side">
+          <div class="section">
+              <div class="section-title">Career Objective</div>
+              <p>To secure a challenging position in a reputable organization to expand my learnings, knowledge, and skills.</p>
+          </div>
+          <div class="section">
+              <div class="section-title">Projects</div>
+              <p>Project 1: Description</p>
+              <p>Project 2: Description</p>
+          </div>
+          <div class="section">
+              <div class="section-title">Certifications and Training</div>
+              <div class="carousel">
+                  <img src="cert1.jpg" alt="Certification 1" class="active">
+                  <img src="cert2.jpg" alt="Certification 2">
+                  <img src="cert3.jpg" alt="Certification 3">
+                  <div class="text">Certification 1 Description</div>
+                  <div class="carousel-buttons">
+                      <button onclick="prevImage()">&#10094;</button>
+                      <button onclick="nextImage()">&#10095;</button>
+                  </div>
+              </div>
+          </div>
+          <div class="section">
+              <div class="section-title">Social Media</div>
+              <div class="social-media">
+                  <a href="https://www.linkedin.com/in/johndoe" target="_blank">
+                      <img src="linkedin.png" alt="LinkedIn">
+                      LinkedIn
+                  </a>
+                  <a href="https://github.com/johndoe" target="_blank">
+                      <img src="github.png" alt="GitHub">
+                      GitHub
+                  </a>
+                  <a href="https://twitter.com/johndoe" target="_blank">
+                      <img src="twitter.png" alt="Twitter">
+                      Twitter
+                  </a>
+              </div>
+          </div>
+      </div>
+  </fieldset>
+  <script>
+      let currentIndex = 0;
+      const images = document.querySelectorAll('.carousel img');
+      const texts = [
+          'Certification 1 Description',
+          'Certification 2 Description',
+          'Certification 3 Description'
+      ];
+      const textElement = document.querySelector('.carousel .text');
 
-    <fieldset>
-        <div class="about-section">
-            <img src="./static/img/close.png" alt="What We Do">
-            <div class="about-text">
-                <h2>What We Do</h2>
-                <p>We specialize in designing, developing, and deploying conversational AI bots that cater to a wide range of industries, including customer service, healthcare, education, and e-commerce. Our bots are equipped with advanced natural language processing (NLP) capabilities.</p>
-            </div>
-        </div>
-    </fieldset>
+      function showImage(index) {
+          images.forEach((img, i) => {
+              img.classList.remove('active');
+              if (i === index) {
+                  img.classList.add('active');
+                  textElement.textContent = texts[i];
+              }
+          });
+      }
 
-    <fieldset>
-        <div class="about-section">
-            <img src="./img/boto.gif" alt="Our Vision">
-            <div class="about-text">
-                <h2>Our Vision</h2>
-                <p>We envision a world where conversational AI seamlessly integrates into everyday life, enhancing user experiences and streamlining operations across various sectors. Our commitment to continuous innovation and excellence drives us to push the boundaries of what’s possible.</p>
-            </div>
-        </div>
-    </fieldset>
+      function nextImage() {
+          currentIndex = (currentIndex + 1) % images.length;
+          showImage(currentIndex);
+      }
+
+      function prevImage() {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          showImage(currentIndex);
+      }
+
+      setInterval(nextImage, 3000); // Change image every 3 seconds
+  </script>
     </div>
     <div class="footer">
       <div class="social-icons">
