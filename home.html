@@ -32,6 +32,47 @@
     margin: 0;
     padding: 0;
 }
+.nav{
+        background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .dropdown5 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    align-items: center;
+  }
+    img{
+      border-radius: 50%;
+    }
+  .dropdown5-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown5-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown5-content a:hover {background-color: #f1f1f1}
+
+  .dropdown5:hover .dropdown5-content {
+    display: block;
+  }
+  span{
+    margin-left: 100px;
+  }
     </style>
     <link rel="stylesheet" href="./static/css/styles.css">
     <link
@@ -81,28 +122,29 @@
   </head>
 
   <body>
-    <div class="container">
-      <nav class="navbar1">
-        <div class="navbar1-logo">
-            <img src="./img/logo1.jpg" alt="Logo">
-            <span class="navbar1-name">Aaruhi</span>
+    <div class="nav">
+      <div class="dropdown5">
+        <img src="profile-image.jpg" width="30" height="30"  onclick="toggleDropdown()">
+        <div class="dropdown5-content" id="dropdownMenu">
+          <a href="#home">Home</a>
+          <a href="./about.html">About Us</a>
+          <a href="./Features.html">Features</a>
+          <a href="./index.html">Logout</a>
         </div>
-        <ul class="navbar1-menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-            <li class="profile">
-                <a href="#profile">
-                    <img src="./img/IMG_20240427_173849.jpg" alt="Profile Photo" class="profile-photo">
-                </a>
-                <ul class="dropdown">
-                  <li><a href="#profile">Profile</a></li>
-                  <li><a href="#dashboard">Dashboard</a></li>
-                  <li><a href="./index.html">Log out</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+        <span style="font-size: 200%;">Aaruhi_Ai_bot</span>
+      </div>
+      
+      <script>
+        function toggleDropdown() {
+          var dropdownMenu = document.getElementById("dropdownMenu");
+          if (dropdownMenu.style.display === "block") {
+            dropdownMenu.style.display = "none";
+          } else {
+            dropdownMenu.style.display = "block";
+          }
+        }
+      </script>
+      </div>
     <div class="bg">
       <!-- Modal for rendering the charts, declare this if you want to render charts, 
          else you remove the modal -->
@@ -161,8 +203,6 @@
         </div>
       </div>
     </div>
-    </div>
-
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script
