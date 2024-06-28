@@ -80,7 +80,7 @@
 }
 
 .navbar1-menu li:hover .dropdown {
-    display:grid;
+    display:flex;
 }
 
 .footer{
