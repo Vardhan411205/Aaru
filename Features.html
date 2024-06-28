@@ -6,6 +6,28 @@
 <title>Dropdown Menu on Click</title>
 <style>
   /* Styles for the dropdown menu */
+  body {
+  font-family: "Open Sans", sans-serif;
+    /* Multiple background images */
+    background: linear-gradient(to bottom,orange,skyblue,limegreen);
+    /* Background position */
+    background-position: center;
+
+    /* Background size */
+    background-size: contain;
+
+    /* Background repeat */
+    background-repeat: no-repeat;
+
+    /* Background attachment to make it scrollable */
+    background-attachment: scroll;
+    
+    /* Other styling to ensure the page is scrollable */
+    height: 2000px;
+   /* Example height to enable scrolling */
+    margin: 0;
+    padding: 0;
+}
   .nav{
         background-color: #333;
     color: #fff;
@@ -52,14 +74,14 @@
 <body>
 <div class="nav">
 <div class="dropdown">
-  <img src="profile-image.jpg" width="30" height="30"  onclick="toggleDropdown()">
+  <img src="./static/img/logo.jpg" width="30" height="30"  onclick="toggleDropdown()">
   <div class="dropdown-content" id="dropdownMenu">
     <a href="./home.html">Home</a>
     <a href="./about.html">About Us</a>
     <a href="#features">Features</a>
     <a href="./index.html">Logout</a>
   </div>
-  <span style="font-size: 200%;">Aaruhi_Ai_Bot</span>
+  <span style="font-size: 100%;">Aaruhi_Ai_Bot</span>
 </div>
 
 <script>
