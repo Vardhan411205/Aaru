@@ -200,7 +200,7 @@
   }
   /* table */
   table {
-            display: flex;
+            margin-left: 2px;
             width: 100%;
             border-collapse: collapse;
         }
@@ -223,16 +223,17 @@
   <body>
     <div class="nav">
         <div class="dropdown">
-          <img src="./static/img/logo.jpg" width="30" height="30"  onclick="toggleDropdown()">
+          <img src="./static/img/logo.jpg" width="50" height="50"  onclick="toggleDropdown()">
           <div class="dropdown-content" id="dropdownMenu">
             <a href="./home.html">Home</a>
             <a href="#about">About Us</a>
             <a href="./Features.html">Features</a>
             <a href="./index.html">Logout</a>
           </div>
-          <span style="font-size: 100%;">Aaruhi_Ai_Bot</span>
         </div>
-        
+        <marquee style="color: white; font-size: 20px; font-weight: bold; border-radius: 15px; padding: 10px;">
+            Aaruhi_Ai_Bot
+        </marquee>        
         <script>
           function toggleDropdown() {
             var dropdownMenu = document.getElementById("dropdownMenu");
