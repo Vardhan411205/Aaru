@@ -17,7 +17,17 @@
         body {
   font-family: "Open Sans", sans-serif;
     /* Multiple background images */
-    background: linear-gradient(to top,rgb(245, 184, 72),skyblue,rgb(139, 239, 139));
+    background: linear-gradient(
+                to bottom,
+                #b0b0b0, /* Mercury */
+                #e5e4e2, /* Venus */
+                #518eef, /* Earth */
+                #f66868, /* Mars */
+                #d1a384, /* Jupiter */
+                #f7dd67, /* Saturn */
+                #9bc4e2, /* Uranus */
+                #6285ec  /* Neptune */
+            );
     /*background-image: url('./static/img/body2.jpg');*/
     /* Background position */
     background-position: center;
@@ -159,7 +169,7 @@
             cursor: pointer;
         }
         .nav{
-        background-color: #333;
+        background-color: rgba(0, 0, 0, 0);
     color: #fff;
     padding: 10px 20px;
     display: flex;
@@ -234,7 +244,7 @@
             <a href="./index.html">Logout</a>
           </div>
         </div>
-        <marquee style="color: white; font-size: 20px; font-weight: bold; border-radius: 15px; padding: 10px;">
+        <marquee style="color: black; font-size: 20px; font-weight: bold; border-radius: 15px; padding: 10px;">
             Aaruhi_Ai_Bot
         </marquee>        
         <script>
