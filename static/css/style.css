@@ -824,7 +824,7 @@ video:focus {
 
 .tap-target {
   color: #fff;
-  background: #060dcfc7;
+  background: rgba(0, 0, 0, 0);
 }
 
 .pdf_attachment {
